@@ -18,7 +18,13 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
-  "private": true,
+  "peerDependencies": {
+    "@angular/common": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "libphonenumber-js": "^1.7.29"
+  },
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/cdk": "~8.2.3",
