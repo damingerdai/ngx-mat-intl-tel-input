@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.phoneForm = fb.group({
-      phone: ['']
+      phone: ['+16789088206']
     });
   }
 }

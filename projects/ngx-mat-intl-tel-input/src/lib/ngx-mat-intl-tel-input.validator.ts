@@ -8,12 +8,12 @@ export const phoneNumberValidator = (control: FormControl) => {
     try {
       numberInstance = parsePhoneNumber(control.value);
     } catch (e) {
-      control.setValue(null);
+      // control.setValue(null);
       return error;
     }
 
     if (numberInstance && !numberInstance.isValid()) {
-      control.setValue(null);
+      // control.setValue(null);
       if (!control.touched) {
         control.markAsTouched();
       }

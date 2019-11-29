@@ -5016,7 +5016,7 @@ less@^3.8.0:
     request "^2.83.0"
     source-map "~0.6.0"
 
-libphonenumber-js@^1.7.25:
+libphonenumber-js@^1.7.29:
   version "1.7.29"
   resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.7.29.tgz#0d9550d8a04b535d7b8b881e33f06a899771adc4"
   integrity sha512-k0qJpAQ6DZA3b6meri1CZr2Lg1lvC539wqLljFdCWLPK8jAXLFqE433NzGzTdxKfm/EmGE8Zhm5pK8R9N7m1pg==

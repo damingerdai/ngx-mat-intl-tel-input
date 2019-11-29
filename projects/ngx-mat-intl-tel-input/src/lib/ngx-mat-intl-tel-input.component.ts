@@ -48,6 +48,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
   @Input() onlyCountries: Array<string> = [];
   @Input() errorStateMatcher: ErrorStateMatcher;
   @Input() enableSearch = false;
+  @Input() alwaysShowFlag = true;
   // tslint:disable-next-line:variable-name
   private _placeholder: string;
   // tslint:disable-next-line:variable-name
@@ -165,7 +166,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
     this.selectedCountry = country;
     this.countryChanged.emit(this.selectedCountry);
     this.onPhoneNumberChange();
-    el.focus();
+    // el.focus();
   }
 
   public onInputKeyPress(event): void {
@@ -216,7 +217,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
       this.numberInstance = parsePhoneNumberFromString(value);
       if (this.numberInstance) {
         const countryCode = this.numberInstance.country;
-        this.phoneNumber = this.numberInstance.formatNational();
+        this.phoneNumber = this.numberInstance.nationalNumber.toString();
         if (!countryCode) {
           return;
         }
@@ -234,7 +235,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
 
   @HostBinding('class.ngx-floating')
   get shouldLabelFloat() {
-    return this.focused || !this.empty;
+    return this.alwaysShowFlag || (this.focused || !this.empty);
   }
 
   @Input()
@@ -279,8 +280,8 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
   }
 
   reset() {
-    this.phoneNumber = null;
-    this.propagateChange(null);
+    this.phoneNumber = '';
+    this.propagateChange('');
   }
 
   ngOnDestroy() {
