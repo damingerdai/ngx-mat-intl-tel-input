@@ -95,8 +95,6 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
     } else {
       prefix = '';
     }
-    console.log(prefix)
-    console.log(numericVal)
     return prefix + numericVal;
   }
 
