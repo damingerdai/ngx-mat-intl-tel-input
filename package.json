@@ -1,6 +1,6 @@
 {
   "name": "@damingerdai/ngx-mat-intl-tel-input2",
-  "version": "2.0.5-beta1",
+  "version": "2.0.5-beta3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 8080 ngx-mat-intl-tel-input-demo",
@@ -16,7 +16,7 @@
     "copy-license": "cp ./LICENSE ./dist/ngx-mat-intl-tel-input",
     "copy-readme": "cp ./README.md ./dist/ngx-mat-intl-tel-input",
     "copy-files": "npm run copy-license && npm run copy-readme",
-    "npm_publish": "npm publish ./dist/ngx-mat-intl-tel-input/damingerdai-ngx-mat-intl-tel-input2-2.0.5-beta2.tgz --registry=https://registry.npmjs.org/ --access public",
+    "npm_publish": "npm publish ./dist/ngx-mat-intl-tel-input/damingerdai-ngx-mat-intl-tel-input2-2.0.5-beta3.tgz --registry=https://registry.npmjs.org/ --access public",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "peerDependencies": {

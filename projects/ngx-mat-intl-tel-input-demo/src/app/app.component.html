@@ -318,12 +318,12 @@
 <div class="content" role="main">
   <form #f="ngForm" [formGroup]="phoneForm">
     <mat-form-field class="form-field">
-      <ngx-mat-intl-tel-input [onlyCountries]="['us', 'gb', 'es', 'cn']"
+      <ngx-mat-intl-tel-input [onlyCountries]="['us', 'gb', 'es', 'cn', 'de']"
         [enablePlaceholder]="true" name="phone" formControlName="phone" #phone></ngx-mat-intl-tel-input>
       <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
       <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
       <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
     </mat-form-field>
   </form>
-
+{{phone.value | json}}
 </div>

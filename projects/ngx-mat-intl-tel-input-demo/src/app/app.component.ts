@@ -11,6 +11,10 @@ export class AppComponent {
 
   public phoneForm: FormGroup;
 
+  public get phone() {
+    return this.phoneForm.get('phone');
+  }
+
   constructor(private fb: FormBuilder) {
     this.phoneForm = fb.group({
       phone: ['+16789088206']
